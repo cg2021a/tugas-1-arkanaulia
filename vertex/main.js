@@ -16,8 +16,8 @@ let canvas = document.getElementById('myCanvas');
 let gl = canvas.getContext('experimental-webgl');
 
 let vertices = [
-	...k1_alas, ...k1_atas, ...k1_layar, ...k1_keycaps,
-    ...k2_atas, ...k2_alas, ...k2_shading, ...k2_layar
+	...k1_alas, ...k1_atas, ...k1_layar, ...k1_keycaps, ...bevel1, ...bevel2,
+    ...k2_atas, ...k2_alas, ...k2_shading, ...k2_layar, ...bevel3, ...bevel4
 ];
 
 let vertexShaderCode = `
@@ -53,6 +53,8 @@ let coords = gl.getAttribLocation(shaderProgram, "a_position");
 var colorLocation = gl.getAttribLocation(shaderProgram, "a_color");
 
 var color = [];
+
+
 
 for (let i = 0; i < k1_alas.length/2; i++) {
 	let r = 0.9;
@@ -91,6 +93,24 @@ for (let i = 0; i < k1_keycaps.length/2; i++) {
 	color.push(b);
 	color.push(1);
 }
+for (let i = 0; i < bevel1.length/2; i++) {
+	let r = 0.9;
+	let g = 0.3;
+	let b = 0.3;
+	color.push(r);
+	color.push(g);
+	color.push(b);
+	color.push(1);
+}
+for (let i = 0; i < bevel2.length/2; i++) {
+	let r = 0.9;
+	let g = 0.3;
+	let b = 0.3;
+	color.push(r);
+	color.push(g);
+	color.push(b);
+	color.push(1);
+}
 for (let i = 0; i < k2_atas.length/2; i++) {
 	let r = 0.9;
 	let g = 0.3;
@@ -122,6 +142,24 @@ for (let i = 0; i < k2_layar.length/2; i++) {
 	let r = 1;
 	let g = 0.6;
 	let b = 0.6;
+	color.push(r);
+	color.push(g);
+	color.push(b);
+	color.push(1);
+}
+for (let i = 0; i < bevel3.length/2; i++) {
+	let r = 0.9;
+	let g = 0.3;
+	let b = 0.3;
+	color.push(r);
+	color.push(g);
+	color.push(b);
+	color.push(1);
+}
+for (let i = 0; i < bevel4.length/2; i++) {
+	let r = 0.9;
+	let g = 0.3;
+	let b = 0.3;
 	color.push(r);
 	color.push(g);
 	color.push(b);
@@ -171,15 +209,15 @@ function drawScene() {
     
     gl.drawArrays(
 		gl.TRIANGLES, 
-		(k1_alas.length + k1_atas.length + k1_layar.length + k1_keycaps.length)/2, 
-		(k2_atas.length + k2_alas.length + k2_shading.length + k2_layar.length)/2
+		(k1_alas.length + k1_atas.length + k1_layar.length + k1_keycaps.length + bevel1.length + bevel2.length)/2, 
+		(k2_atas.length + k2_alas.length + k2_shading.length + k2_layar.length + bevel3.length + bevel4.length)/2
 	);
 		
 	gl.uniformMatrix4fv(u_matrix, false, leftObject);
     gl.drawArrays(
 		gl.TRIANGLES, 
 		0, 
-		(k1_alas.length + k1_atas.length + k1_layar.length + k1_keycaps.length)/2
+		(k1_alas.length + k1_atas.length + k1_layar.length + k1_keycaps.length + bevel1.length + bevel2.length)/2
 	);
 	requestAnimationFrame(drawScene);
 }

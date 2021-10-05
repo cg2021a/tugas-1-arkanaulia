@@ -1,3 +1,34 @@
+function make_bevel(degree, px = 0, py = 0 , radius = 1, start_degree = 0){
+    let points = []
+
+    for(let i = 0; i <= degree; i++){
+        let j = (i + start_degree) * Math.PI / 180;
+        let k = (i + start_degree + 1) * Math.PI / 180;
+    
+        let vert1 = [
+            Math.sin(j) * radius + px, Math.cos(j) * radius + py
+        ]
+    
+        let vert2 = [
+            px, py
+        ]
+        let vert3 = [
+            Math.sin(k) * radius + px, Math.cos(k) * radius + py
+        ]
+    
+        points = points.concat(vert1);
+        points = points.concat(vert2);
+        points = points.concat(vert3);
+    }
+
+    return points;
+}
+
+let bevel1 = make_bevel(100, 0.354, -0.214, 0.045, 100)
+let bevel2 = make_bevel(100, -0.383, -0.225, 0.05, 160)
+let bevel3 = make_bevel(120, 0.343, -0.263, 0.04, 80)
+let bevel4 = make_bevel(100, -0.219, -0.235, 0.05, 160)
+
 let n=1.5
 
 let k1_alas = [
@@ -46,18 +77,18 @@ let m=1.4
 let k2_atas = [
     //atas
     -0.38,  0,  
-    -0.24,  -0.28, 
-    0.43, 0, 
-    0.43, 0,    
-    0.365, -0.305,
-    -0.24,  -0.28, 
+    -0.25,  -0.28, 
+    0.45, 0, 
+    0.45, 0,    
+    0.369, -0.30,
+    -0.25,  -0.28, 
 ];
 
 let k2_alas = [
     //alas
     -0.45,  0,  
     -0.5,  0.05, 
-    0.45, 0, 
+    0.46, 0, 
     0.45, 0,    
     -0.5,  0.05,
     0.5,  0.05,
