@@ -8,7 +8,7 @@ Benda: Kotak Makan
 
 
 
-Deployment: https://festive-engelbart-976419.netlify.app/
+Deployment: https://amazing-goldwasser-fee071.netlify.app
 
 ## Kotak Makan
 
