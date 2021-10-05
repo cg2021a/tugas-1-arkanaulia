@@ -6,6 +6,10 @@ NRP: 05111940000128
 
 Benda: Kotak Makan
 
+
+
+Deployment: https://festive-engelbart-976419.netlify.app/
+
 ## Kotak Makan
 
 depan
