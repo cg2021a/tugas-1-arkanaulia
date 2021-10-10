@@ -8,7 +8,9 @@ Benda: Kotak Makan
 
 
 
-Deployment: https://amazing-goldwasser-fee071.netlify.app
+Deployment vertex kotak makan: https://amazing-goldwasser-fee071.netlify.app
+
+Deployment Three.js: https://vigilant-villani-dc2027.netlify.app/
 
 ## Kotak Makan
 
