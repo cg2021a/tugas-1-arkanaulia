@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Belajar Three.js</title>
+</head>
+<body>
+    <h1>Mencoba Three.js</h1>
+    <h2>Arkan Aulia Farhan - 05111940000128</h2>
+    <details class="custom-select">
+        <summary class="radios">
+            <input type="radio" name="item" id="default" title="Light Options" checked>
+            <input type="radio" name="item" id="light1" title="Ambient Light">
+            <input type="radio" name="item" id="light2" title="Hemisphere Light">
+            <input type="radio" name="item" id="light3" title="Directional Light">
+            <input type="radio" name="item" id="light4" title="Point Light">
+            <input type="radio" name="item" id="light5" title="Spot Light">
+        </summary>
+        <ul class="list">
+            <li>
+                <label for="light1">Ambient Light</label>
+            </li>
+            <li>
+                <label for="light2">Hemisphere Light</label>
+            </li>
+            <li>
+                <label for="light3">Directional Light</label>
+            </li>
+            <li>
+                <label for="light4">Point Light</label>
+            </li>
+            <li>
+                <label for="light5">Spot Light</label>
+            </li>
+        </ul>
+    </details>
+    <canvas id="myCanvas" ></canvas>
+    <script src="./js/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/264161/OrbitControls.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
