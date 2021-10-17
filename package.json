@@ -1,0 +1,8 @@
+{
+  "name": "Tugas 1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/cg2021a/tugas-1-arkanaulia.git",
+  "author": "arkanaulia <arkanaulia@gmail.com>",
+  "license": "MIT"
+}

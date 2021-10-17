@@ -51,8 +51,12 @@ function main() {
         color: 'red'
     })
 
-    const m7 = new THREE.MeshNormalMaterial({
+    const normalMaterial = new THREE.MeshNormalMaterial({
+        flatShading: true,
+        wireframe: false
     })
+    const torusknot = new THREE.Mesh(geo6, normalMaterial)
+    scene.add(torusknot)
 
     
     
@@ -68,8 +72,7 @@ function main() {
     scene.add(bulet)
     const silinder = new THREE.Mesh(geo5, m5)
     scene.add(silinder)
-    const torusknot = new THREE.Mesh(geo6, m1)
-    scene.add(torusknot)
+    
     const dode = new THREE.Mesh(geo7, m7)
     scene.add(dode)
 

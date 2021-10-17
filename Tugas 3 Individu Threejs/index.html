@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/three.min.js"></script>
+    <script src="./js/controls/OrbitControls.js"></script>
+    <script src="./js/controls/PointerLockControls.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Tugas 3 - Threejs game</title>
+</head>
+
+<body>
+    <h1 class="judul">Task 3 - Click the same color!</h1>
+    <h2>Arkan Aulia Farhan - 05111940000128</h2>
+    <div class="deskripsi">
+        <div class="information">
+            <div class="kode">
+                <p>Score: <span id="score">0</span></p>
+
+                <button id="play-button">Play</button>
+            </div>
+        </div>
+
+        <h2 id="gameover">Game Over</h2>
+    </div>
+
+    <section class="preview-canvas">
+        <canvas class="myCanvas"> Browser tidak mendukung HTML 5 </canvas>
+    </section>
+
+    <script src="./js/setup.js"></script>
+    <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>
