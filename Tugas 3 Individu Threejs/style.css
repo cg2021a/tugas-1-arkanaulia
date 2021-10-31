@@ -35,7 +35,7 @@ p {
     color: rgb(8, 255, 103);
 }
 
-..myCanvas {
+.myCanvas {
     border: 4.5px solid rgb(8, 255, 103);
     margin-top: 0%;
 }
